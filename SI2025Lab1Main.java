@@ -124,10 +124,9 @@ public class SI2025Lab1Main {
         manager.addTask("Write report", Priority.HIGH, "Work");
         manager.addTask("Submit assignment", Priority.MEDIUM, "School");
         manager.addTask("Buy groceries", Priority.LOW, "Personal");
+        manager.addTask("Prepare slides", Priority.HIGH, "Work");
 
         System.out.println("\n--- Filtered Tasks (Work) ---");
         System.out.println(manager.filterByCategory("Work"));
-
-        manager.printTasks();
     }
 }
