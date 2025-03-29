@@ -1,0 +1,43 @@
+*   fbe7293 (HEAD -> master, origin/master, origin/HEAD) Resolved merge conflict
+|\
+| * e491578 (origin/5-filter-tasks-by-category, 5-filter-tasks-by-category) Implemented filterByCategory method
+* | 0da6764 Solved merge conflict
+|\|
+| * 285f13c Implemented filterByCategory method
+* | 14d72f6 Merge branch 'master' into 7-count-tasks-per-category
+|/
+* 5f9446d Implemented filterByCategory method
+*   9bad0fd Merge pull request #12 from filipn123/7-count-tasks-per-category
+|\
+| *   c5ae1f1 (origin/7-count-tasks-per-category) Merge branch 'master' into 7-count-tasks-per-category
+| |\
+| |/
+|/|
+* |   2d49917 Merge pull request #11 from filipn123/4-sort-tasks-by-priority
+|\ \
+| * \   5df2966 (origin/4-sort-tasks-by-priority) Merge branch 'master' into 4-sort-tasks-by-priority
+| |\ \
+| |/ /
+|/| |
+* | |   081ff18 Merge pull request #10 from filipn123/2-find-all-completed-tasks
+|\ \ \
+| | * | b39345d (4-sort-tasks-by-priority) Implemented sortTasksByPriority method
+| |/ /
+|/| |
+| | * 14e4225 (7-count-tasks-per-category) Implemented countTasksPerCategory method
+| | * 516f025 Implemented countTasksPerCategory method
+| | * 0c7e221 Implemented countTasksPerCategory method
+| |/
+|/|
+| | * 7eb0c22 (refs/stash) WIP on 2-find-all-completed-tasks: 59fd27b Implemented getCompletedTasks method
+| |/|
+| | * f2aad99 index on 2-find-all-completed-tasks: 59fd27b Implemented getCompletedTasks method
+| |/
+| * 59fd27b (origin/2-find-all-completed-tasks, 2-find-all-completed-tasks) Implemented getCompletedTasks method
+|/
+| * 24c1df6 (6-find-the-highest-priority-unfinished-task) Implemented getCompletedTasks method
+|/
+* 7b30f40 (origin/6-find-the-highest-priority-unfinished-task) Add starter code
+* b7eb12c Initial commit
+* 45083f4 Initial commit
+* c380de5 Initial commit

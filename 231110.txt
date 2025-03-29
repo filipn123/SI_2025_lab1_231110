@@ -1,0 +1,33 @@
+git fetch origin - ги превземаме сите промени во remote repository
+git checkout 2-find-all-completed-tasks - прва гранка
+git add . - ги праќаме сите промени
+git commit -m "Implemented getCompletedTasks method" - правиме commit
+git push origin 2-find-all-completed-tasks - праќаме кон github
+
+git checkout 4-find-all-completed-tasks
+git add .
+git commit -m "Implemented sortTasksByPriority method"
+git push origin 4-sort-tasks-by-priority
+
+git checkout origin 7-count-tasks-per-category
+git add .
+git commit -m "Implemented countTasksPerCategory method"
+git push origin 7-count-tasks-per-category
+
+По грешка сите 3 ги споив со online едиторот на github, затоа направив решение и на четврт метод
+
+git checkout 5-filter-tasks-by-category - четврта гранка
+git add .
+git commit -m "Implemented filterTasksByCategory method"
+git push origin 5-filter-tasks-by-category
+
+git checkout master - се враќаме на master гранката
+git merge 5-filter-tasks-by-category - правиме merge локално
+
+решавање конфликт во VSCode (или друг Java едитор)
+
+git add .
+git commit -m "Resolved merge conflict"
+git push origin master
+
+
