@@ -69,8 +69,13 @@ class TaskManager {
 
     // 2. Find all completed tasks
     public List<Task> getCompletedTasks() {
-        // TODO: Implement logic to return completed tasks
-        return new ArrayList<>();
+        List<Task> completedTasks = new ArrayList<>();
+        for (Task task : tasks) {
+            if (task.isCompleted()) {
+                completedTasks.add(task);
+            }
+        }
+        return completedTasks;
     }
 
     // 3. List tasks sorted by name
@@ -118,10 +123,14 @@ public class SI2025Lab1Main {
         manager.addTask("Write report", Priority.HIGH, "Work");
         manager.addTask("Submit assignment", Priority.MEDIUM, "School");
         manager.addTask("Buy groceries", Priority.LOW, "Personal");
-
+      
         System.out.println("\n--- Tasks Sorted by Priority ---");
         manager.sortTasksByPriority();
         manager.printTasks();
+      
+        System.out.println("\n--- Completed Tasks ---");
+        manager.markTaskCompleted("Buy groceries");
+        System.out.println(manager.getCompletedTasks());
 
         manager.printTasks();
     }
