@@ -88,6 +88,7 @@ class TaskManager {
         tasks.sort(Comparator.comparing(Task::getPriority).reversed());
     }
 
+
     // 5. Filter tasks by category
     public List<Task> filterByCategory(String category) {
         // TODO: Implement filtering logic
@@ -102,9 +103,14 @@ class TaskManager {
 
     // 7. Count tasks per category
     public Map<String, Integer> countTasksPerCategory() {
-        // TODO: Implement counting logic
-        return new HashMap<>();
+        Map<String, Integer> categoryCount = new HashMap<>();
+        for (Task task : tasks) {
+            categoryCount.put(task.getCategory(),
+            categoryCount.getOrDefault(task.getCategory(), 0) + 1);
+        }
+        return categoryCount;
     }
+
 
     // 8. Mark a task as completed by name
     public void markTaskCompleted(String name) {
@@ -123,6 +129,10 @@ public class SI2025Lab1Main {
         manager.addTask("Write report", Priority.HIGH, "Work");
         manager.addTask("Submit assignment", Priority.MEDIUM, "School");
         manager.addTask("Buy groceries", Priority.LOW, "Personal");
+        manager.addTask("Prepare slides", Priority.HIGH, "Work");
+
+        System.out.println("\n--- Count Tasks Per Category ---");
+        System.out.println(manager.countTasksPerCategory());
       
         System.out.println("\n--- Tasks Sorted by Priority ---");
         manager.sortTasksByPriority();
@@ -135,3 +145,4 @@ public class SI2025Lab1Main {
         manager.printTasks();
     }
 }
+
