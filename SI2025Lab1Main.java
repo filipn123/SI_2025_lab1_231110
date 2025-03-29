@@ -131,6 +131,7 @@ public class SI2025Lab1Main {
         manager.addTask("Buy groceries", Priority.LOW, "Personal");
         manager.addTask("Prepare slides", Priority.HIGH, "Work");
 
+
         System.out.println("\n--- Count Tasks Per Category ---");
         System.out.println(manager.countTasksPerCategory());
       
@@ -141,6 +142,10 @@ public class SI2025Lab1Main {
         System.out.println("\n--- Completed Tasks ---");
         manager.markTaskCompleted("Buy groceries");
         System.out.println(manager.getCompletedTasks());
+
+        System.out.println("\n--- Filtered Tasks (Work) ---");
+        System.out.println(manager.filterByCategory("Work"));
+
 
         manager.printTasks();
     }
