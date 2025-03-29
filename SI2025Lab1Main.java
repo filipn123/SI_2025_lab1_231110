@@ -125,7 +125,8 @@ public class SI2025Lab1Main {
         manager.addTask("Submit assignment", Priority.MEDIUM, "School");
         manager.addTask("Buy groceries", Priority.LOW, "Personal");
 
-        // MISSING: Calls to the new methods that will be implemented
+        System.out.println("\n--- Filtered Tasks (Work) ---");
+        System.out.println(manager.filterByCategory("Work"));
 
         manager.printTasks();
     }
