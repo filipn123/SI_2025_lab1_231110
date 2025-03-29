@@ -69,13 +69,8 @@ class TaskManager {
 
     // 2. Find all completed tasks
     public List<Task> getCompletedTasks() {
-        List<Task> completedTasks = new ArrayList<>();
-        for (Task task : tasks) {
-            if (task.isCompleted()) {
-                completedTasks.add(task);
-            }
-        }
-        return completedTasks;
+        // TODO: Implement logic to return completed tasks
+        return new ArrayList<>();
     }
 
     // 3. List tasks sorted by name
@@ -85,15 +80,20 @@ class TaskManager {
 
     // 4. Sort tasks by priority
     public void sortTasksByPriority() {
-        tasks.sort(Comparator.comparing(Task::getPriority).reversed());
+        // TODO: Implement sorting by priority logic
     }
-
 
     // 5. Filter tasks by category
     public List<Task> filterByCategory(String category) {
-        // TODO: Implement filtering logic
-        return new ArrayList<>();
+        List<Task> filteredTasks = new ArrayList<>();
+        for (Task task : tasks) {
+            if (task.getCategory().equalsIgnoreCase(category)) {
+                filteredTasks.add(task);
+            }
+        }
+        return filteredTasks;
     }
+
 
     // 6. Find the highest-priority unfinished task
     public List<Task> getMostUrgentTasks() {
@@ -103,14 +103,9 @@ class TaskManager {
 
     // 7. Count tasks per category
     public Map<String, Integer> countTasksPerCategory() {
-        Map<String, Integer> categoryCount = new HashMap<>();
-        for (Task task : tasks) {
-            categoryCount.put(task.getCategory(),
-            categoryCount.getOrDefault(task.getCategory(), 0) + 1);
-        }
-        return categoryCount;
+        // TODO: Implement counting logic
+        return new HashMap<>();
     }
-
 
     // 8. Mark a task as completed by name
     public void markTaskCompleted(String name) {
@@ -129,20 +124,9 @@ public class SI2025Lab1Main {
         manager.addTask("Write report", Priority.HIGH, "Work");
         manager.addTask("Submit assignment", Priority.MEDIUM, "School");
         manager.addTask("Buy groceries", Priority.LOW, "Personal");
-        manager.addTask("Prepare slides", Priority.HIGH, "Work");
 
-        System.out.println("\n--- Count Tasks Per Category ---");
-        System.out.println(manager.countTasksPerCategory());
-      
-        System.out.println("\n--- Tasks Sorted by Priority ---");
-        manager.sortTasksByPriority();
-        manager.printTasks();
-      
-        System.out.println("\n--- Completed Tasks ---");
-        manager.markTaskCompleted("Buy groceries");
-        System.out.println(manager.getCompletedTasks());
+        // MISSING: Calls to the new methods that will be implemented
 
         manager.printTasks();
     }
 }
-
