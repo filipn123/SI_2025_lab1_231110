@@ -1,0 +1,19 @@
+*   af5f514 (HEAD -> master, origin/master, origin/HEAD) Merge branch '3-list-ta
+sks-sorted-by-name'
+|\
+| * a93468b (origin/3-list-tasks-sorted-by-name, 3-list-tasks-sorted-by-name) Im
+plemented listTasksSortedByName method
+* |   950d3c4 Merge pull request #11 from filipn123/2-find-all-completed-tasks
+|\ \
+| * | 2f3019a (origin/2-find-all-completed-tasks, 2-find-all-completed-tasks) Im
+plemented findAllCompletedTasks method
+| |/
+* |   42cddc1 Merge pull request #10 from filipn123/1-remove-a-task-by-name
+|\ \
+| |/
+|/|
+| * 1444735 (origin/1-remove-a-task-by-name, 1-remove-a-task-by-name) Implemente
+d removeTaskByName method
+|/
+* d2550e3 Add starter code
+* 52312f2 Initial commit
