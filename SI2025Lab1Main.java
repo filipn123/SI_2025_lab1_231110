@@ -64,13 +64,18 @@ class TaskManager {
 
     // 1. Remove a task by name
     public void removeTask(String name) {
-        // TODO: Implement removal logic
+        tasks.removeIf(task -> task.getName().equalsIgnoreCase(name));
     }
 
     // 2. Find all completed tasks
     public List<Task> getCompletedTasks() {
-        // TODO: Implement logic to return completed tasks
-        return new ArrayList<>();
+        List<Task> completed = new ArrayList<>();
+        for (Task task : tasks) {
+            if (task.isCompleted()) {
+                completed.add(task);
+            }
+        }
+        return completed;
     }
 
     // 3. List tasks sorted by name
@@ -103,7 +108,12 @@ class TaskManager {
 
     // 8. Mark a task as completed by name
     public void markTaskCompleted(String name) {
-        // TODO: Implement completion logic
+        for (Task task : tasks) {
+            if (task.getName().equalsIgnoreCase(name)) {
+                task.complete();
+                break;
+            }
+        }
     }
 
     // 9. Mark all tasks in a category as completed
@@ -119,8 +129,13 @@ public class SI2025Lab1Main {
         manager.addTask("Submit assignment", Priority.MEDIUM, "School");
         manager.addTask("Buy groceries", Priority.LOW, "Personal");
 
-        // MISSING: Calls to the new methods that will be implemented
-
+        manager.removeTask("Submit assignment");
+        System.out.println("\nAfter removing 'Submit assignment':");
         manager.printTasks();
+        manager.markTaskCompleted("Buy groceries");
+        System.out.println("\nCompleted Tasks:");
+        for (Task task : manager.getCompletedTasks()) {
+            System.out.println(task);
+        }
     }
 }
